@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    strong {
+        color: brown;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .row{margin-left:70px;}
+</style>
+<div data-scrollreveal="enter top over 1.0s after 0.1s">
+    <div class="col-lg-12">
+        <h1 class="page-header" align="center">Products</h1>
+        <ol class="breadcrumb">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li class="active">Products</li>
+        </ol>
+        <div align="center">
+            <h2>Marble Designs</h2>
+            @Html.Partial("Pagination")
+        </div>
+    </div>
+</div>
+<hr />
+<hr />
+
+<div class="passion">
+
+    <div class="row">
+        <div id="first" class="col-md-4 col-xm-4">
+            <img class="img-circle" src="https://secureservercdn.net/104.238.68.130/88t.64b.myftpupload.com/wp-content/uploads/2016/02/5-1.png?time=1627269234" alt="" width="200" height="200" /><br />
+            <br />
+            <strong>Product Name: WHITE CARRARA</strong><br />
+            <strong>Product Code Design: M101</strong><br />
+            <button> @Html.ActionLink("Book Design", "Create", "Orders")</button>
+        </div><br />
+        <div id="first" class="col-md-4 col-xm-4">
+            <img class="img-circle" src="https://secureservercdn.net/104.238.68.130/88t.64b.myftpupload.com/wp-content/uploads/2016/02/7-1.png?time=1627269234" alt="" width="200" height="200" />
+            <br />
+            <strong>Product Name: EMPERADOR</strong><br />
+            <strong>Product Code Design: M102</strong><br />
+            <button> @Html.ActionLink("Book Design", "Create", "Orders")</button>
+        </div><br />
+        <div id="first" class="col-md-4 col-xm-4">
+            <img class="img-circle" src="https://secureservercdn.net/104.238.68.130/88t.64b.myftpupload.com/wp-content/uploads/2016/02/8-1.png?time=1627269234" alt="" width="200" height="200" />
+            <br />
+            <strong>Product Name: ONYX</strong><br />
+            <strong>Product Code Design: M103</strong><br />
+            <button> @Html.ActionLink("Book Design", "Create", "Orders")</button>
+        </div><br />
+    </div><br />
+
+
+
+    <div class="row">
+        <div id="first" class="col-md-4 col-xm-4">
+            <img class="img-circle" src="https://secureservercdn.net/104.238.68.130/88t.64b.myftpupload.com/wp-content/uploads/2016/02/13-1.png?time=1627269234" alt="" width="200" height="200" />
+            <br />
+            <strong>Product Name: GREEN MARBLE</strong><br />
+            <strong>Product Code Design: M104</strong><br />
+            <button> @Html.ActionLink("Book Design", "Create", "Orders")</button>
+        </div><br />
+        <div id="first" class="col-md-4 col-xm-4">
+            <img class="img-circle" src="https://secureservercdn.net/104.238.68.130/88t.64b.myftpupload.com/wp-content/uploads/2016/02/8.png?time=1627269234" alt="" width="200" height="200" />
+            <br />
+            <strong>Product Name: RED ALICANATE</strong><br />
+            <strong>Product Code Design: M105</strong><br />
+            <button> @Html.ActionLink("Book Design", "Create", "Orders")</button>
+        </div><br />
+        <div id="first" class="col-md-4 col-xm-4">
+            <img class="img-circle" src="https://secureservercdn.net/104.238.68.130/88t.64b.myftpupload.com/wp-content/uploads/2016/02/7.png?time=1627269234" alt="" width="200" height="200" />
+            <br />
+            <strong>Product Name: RED VERONA</strong><br />
+            <strong>Product Code Design: M106</strong><br />
+            <button> @Html.ActionLink("Book Design", "Create", "Orders")</button>
+        </div><br />
+    </div><br />
+
+    <div class="row">
+        <div id="first" class="col-md-4 col-xm-4">
+            <img class="img-circle" src="https://secureservercdn.net/104.238.68.130/88t.64b.myftpupload.com/wp-content/uploads/2016/02/13.png?time=1627585049" alt="" width="200" height="200" />
+            <br />
+            <strong>Product Name: RED MULTICOLOR</strong><br />
+            <strong>Product Code Design: M107</strong><br />
+            <button> @Html.ActionLink("Book Design", "Create", "Orders")</button>
+        </div>
+        <div id="first" class="col-md-4 col-xm-4">
+            <img class="img-circle" src="https://secureservercdn.net/104.238.68.130/88t.64b.myftpupload.com/wp-content/uploads/2016/02/6.png?time=1627269234" alt="" width="200" height="200" />
+            <br />
+            <strong>Product Name: BLACK MOURINA</strong><br />
+            <strong>Product Code Design: M108</strong><br />
+            <button> @Html.ActionLink("Book Design", "Create", "Orders")</button>
+        </div>
+        <div id="first" class="col-md-4 col-xm-4">
+            <img class="img-circle" src="https://secureservercdn.net/104.238.68.130/88t.64b.myftpupload.com/wp-content/uploads/2016/05/Diana-Royal2.png?time=1627269234" alt="" width="200" height="200" />
+            <br />
+            <strong>Product Name: DIANA ROYALE</strong><br />
+            <strong>Product Code Design: M109</strong><br />
+            <button> @Html.ActionLink("Book Design", "Create", "Orders")</button>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/anim.js"></script>

@@ -1,0 +1,206 @@
+﻿@model MaldiniWorld.Contact
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+
+    <div class="row">
+        <div data-scrollreveal="enter top over 1.0s after 0.1s">
+            <div class="col-lg-12">
+                <h1 class="page-header">Contact us <small>We'd Love to Hear From You!</small></h1><br />
+                <ol class="breadcrumb">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="active">Contact</li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15856.859123319418!2d3.3622622!3d6.4944682!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb3c2db70a6a96841!2sMaldini%20granite%20and%20marbles%20Ltd!5e0!3m2!1sen!2sng!4v1627651877478!5m2!1sen!2sng" width="1150" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+    </div><!-- /.row -->
+    <div class="true">
+        <div class="row">
+            <div class="col-sm-8">
+                <h3>Let's Get In Touch!</h3>
+                <p>Make enquiries or Report an issue.</p>
+
+                <div class="col-lg-6">
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FullName)
+                        <div id="input4">
+                            @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.PhoneNumber)
+
+                        <div id="input4">
+                            @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.Email)
+
+                        <div id="input4">
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.Message)
+
+                        <div id="input4">
+                            @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-default" />
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <h3>Maldini Marbles.</h3>
+                    <h4>Customer statisfaction is our priority</h4>
+                    <h4><strong>HEAD OFFICE.</strong></h4>
+                    <p>
+                        <strong>Email:</strong><a href="mailto:contact@maldinigraniteandmarbles.com">contact@maldinigraniteandmarble.com</a><br>
+                        <strong>Phone:</strong> 0903-491-5646, 0803-300-8998, 0803-307-9719.<br>
+                        <strong>Address:</strong> 41a, Western Avenue (Near National Stadium), Alaka Bus Stop, Surulere, Lagos Nigeria.<br>
+                        <b>Website:</b> <a href="https://maldinigraniteandmarbles.com/">https://maldinigraniteandmarbles.com</a>
+                    </p>
+                    <hr>
+
+
+                </div>
+            </div>
+        </div><br />
+        <div class="row">
+            <div class="col-md-4">
+                <h4><strong>LEKKI OFFICE.</strong></h4>
+                <p>
+                    <strong>Email:</strong><a href="mailto:info.maldinilekki@maldinigraniteandmarble.com">info.maldinilekki@maldinigraniteandmarble.com</a><br>
+                    <strong>Phone:</strong> 0803-577-0933, 0803-320-3404<br>
+                    <strong>Address:</strong> Lekki Epe Expressway, Beside 2nd toll gate, Lekki Lagos Nigeria.<br>
+                    <b>Website:</b> <a href="https://maldinigraniteandmarbles.com/">https://maldinigraniteandmarbles.com</a>
+                </p>
+                <hr>
+            </div>
+            <div class="col-md-4">
+                <h4><strong>ABUJA OFFICE.</strong></h4>
+                <p>
+                    <strong>Email:</strong><a href="mailto:info.maldiniabuja@maldinigraniteandmarble.com">info.maldiniabuja@maldinigraniteandmarble.com</a><br>
+                    <strong>Phone:</strong>&nbsp;0803-304-6200, 0803-595-1655, 0816-999-9905<br>
+                    <strong>Address:</strong> 704 Ahmadubello Way Garki II Abuja Nigeria. Near Kia Motors<br>
+                    <b>Website:</b> <a href="https://maldinigraniteandmarbles.com/">https://maldinigraniteandmarbles.com</a>
+                </p>
+                <hr>
+            </div>
+            <div class="col-md-4">
+                <h4><strong>PORT HARCOURT OFFICE.</strong></h4>
+                <p>
+                    <strong>Email:</strong><a href="mailto:info.maldiniph@maldinigraniteandmarble.com">info.maldiniph@maldinigraniteandmarble.com</a><br>
+                    <strong>Phone:</strong>&nbsp;0803-320-3403, 0803-719-3570.<br>
+                    <strong>Address:</strong> 242 Aba Road Port Harcourt Rivers State Nigeria. Opp. Air force Base.<br>
+                    <b>Website:</b> <a href="https://maldinigraniteandmarbles.com/">https://maldinigraniteandmarbles.com</a>
+                </p>
+                <hr>
+
+
+            </div>
+
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h4><strong>ENUGU OFFICE.</strong></h4>
+                <p>
+                    <strong>Email:</strong> <a href="mailto:info.maldinienugu@maldinigraniteandmarbles.com">info.maldinienugu@maldinigraniteandmarbles.com</a><br>
+                    <strong>Phone:</strong> 0803-342-4193, 0803-468-3263<br>
+                    <strong>Address:</strong> 4 Rangers Avenue, Enugu, Nigeria. Beside Crunchies Fried Chicken.<br>
+                    <strong>Website:</strong> <a href="https://maldinigraniteandmarbles.com/">https://maldinigraniteandmarbles.com</a>
+                </p>
+                <hr>
+
+            </div>
+
+            <div class="col-md-4">
+                <h4><strong>CALABAR OFFICE.</strong></h4>
+                <p>
+                    <strong>Email:</strong> <a href="mailto:info.maldinicalabar@maldinigraniteandmarbles.com">info.maldinicalabar@maldinigraniteandmarbles.com</a><br>
+                    <strong>Phone:</strong> 0803-703-1714<br>
+                    <strong>Address:</strong> 29 Maryselessor Calabar, Cross River State, Nigeria. Opp. E. Okon / NNPC Filling Station.<br>
+                    <strong>Website:</strong> <a href="https://maldinigraniteandmarbles.com/">https://maldinigraniteandmarbles.com</a>
+                </p>
+                <hr>
+
+            </div>
+            <div class="col-md-4">
+                <h4><strong>OWERRI OFFICE.</strong></h4>
+                <p>
+                    <strong>Email:</strong> <a href="mailto:info.maldiniowerri@maldinigraniteandmarbles.com">info.maldiniowerri@maldinigraniteandmarbles.com</a><br>
+                    <strong>Phone:</strong> 0810-189-2951, 0708-879-5004<br>
+                    <strong>Address:</strong> No 8 MCC Road, Owerri Imo State, Nigeria. By Methodist Bus Stop.<br>
+                    <strong>Website:</strong> <a href="https://maldinigraniteandmarbles.com/">https://maldinigraniteandmarbles.com</a>
+                </p>
+                <hr>
+
+            </div>
+            <div class="col-md-4">
+
+                <h4><strong>UYO OFFICE.</strong></h4>
+                <p>
+                    <strong> Email:</strong> <a href="mailto:info.maldiniuyo@maldinigraniteandmarbles.com">info.maldiniuyo@maldinigraniteandmarbles.com</a><br>
+                    <strong> Phone:</strong> 0803-222-9042, 0708-879-5004.<br>
+                    <strong> Address:</strong> 191 Aka Road Uyo, Akwa Ibom State Nigeria.<br>
+                    <strong> Website:</strong> <a href="https://maldinigraniteandmarbles.com/">https://maldinigraniteandmarbles.com</a>
+                </p>
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <style>
+        h1, h3, h4 {
+            color: brown;
+        }
+
+        .true {
+            background-color: white;
+            border-color: brown;
+            border: solid;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+
+    @Scripts.Render("~/Scripts/anim")
+}

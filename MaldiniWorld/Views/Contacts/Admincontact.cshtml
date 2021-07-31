@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MaldiniWorld.Contact>
+
+@{
+    ViewBag.Title = "Admincontact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Administative Contact Management.</h2>
+<script src="~/Scripts/anim.js"></script>
+<p class="btn btn-default">
+    @Html.ActionLink("Create New", "Create")
+</p>
+<br />
+<p align="right">@DateTime.Now</p>
+<table class="table table-bordered table-striped table-responsive table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                <button class="btn btn-default" > @Html.ActionLink("Edit", "Edit", new { id = item.Id }) </button>
+                <button class="btn btn-default" > @Html.ActionLink("Details", "Details", new { id = item.Id })</button>
+                <button class="btn btn-default" >  @Html.ActionLink("Delete", "Delete", new { id = item.Id }) </button>
+            </td>
+        </tr>
+    }
+
+
+</table>
